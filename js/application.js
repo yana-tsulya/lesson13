@@ -9,11 +9,12 @@ jQuery(function($){
         $('#dress').on('click', function () {
             $("#show").dialog({
                 width: 250,
-                height: 500,
+                height: 250,
                 resizable: false,
                 draggable: false,
                 modal: true
             });
+           // $("#show").
         });
     }
 });
