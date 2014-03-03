@@ -164,3 +164,46 @@ ul.last-popular {
 	font: 11px "Trebuchet MS", sans-serif;
 	color: #949494;
 }
+
+.modal {
+    display: none;
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    margin: -150px 0 0 -150px;
+    background: #000000;
+}
+.modal.active {
+    display: block;
+}
+.modal img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin: -68px 0 0 -68px;
+}
+.modal button {
+    position: absolute;
+    top: 50%;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+.modal button.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 20px;
+    width: 50px;
+    cursor: pointer;
+}
+.modal button.left {
+    left: 0;
+    background: url(../images/button_left.png) no-repeat;
+}
+.modal button.right {
+    right: 0;
+    background: url(../images/button_right.png) no-repeat;
+}
