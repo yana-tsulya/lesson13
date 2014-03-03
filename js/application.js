@@ -14,31 +14,29 @@ jQuery(document).ready(
 
       var imagesSrcArray = ['images/dress.png', 'images/rings.png', 'images/hall.png', 'images/hairstyles.png'];
       var arrayLength = imagesSrcArray.length;
-          
+
       ancore.click(
           function(){
               event.preventDefault();
 
               var clickImageSrc=$(this).find('img').attr('src');
-              var popupClass=popup.attr('class').split(" ")[1];
 
 
-              if (clickImageSrc != popupImage.attr('src')){
+              if (clickImageSrc !== popupImage.attr('src')){
                   popupImage.attr('src', clickImageSrc);
               };
-              if (popupClass != $('active')){
-                  console.log('&&&&&');
+              if (!popup.hasClass('active')){
                   popup.addClass('active');
               };
           });
 
       leftButton.click (
           function(){
-
               for (var i = 0; i < arrayLength; i++) {
                   if (imagesSrcArray[i] == popupImage.attr('src')) {
                       if(i === 0) {
                           popupImage.attr('src', imagesSrcArray[arrayLength-1]);
+                          break;
                       }
                       else {
                           popupImage.attr('src', imagesSrcArray[i-1]);
@@ -50,7 +48,6 @@ jQuery(document).ready(
 
       rightButton.click (
           function(){
-
               for (var i = 0; i < arrayLength; i++) {
                   if (imagesSrcArray[i] == popupImage.attr('src')) {
                       if(i === arrayLength-1) {
@@ -58,6 +55,7 @@ jQuery(document).ready(
                       }
                       else {
                           popupImage.attr('src', imagesSrcArray[i+1]);
+                          break;
                       };
                   };
               };
